@@ -13,7 +13,7 @@ function App() {
   });
 
   function fetchData() {
-    fetch("http://localhost:8000/get")
+    fetch("https://residents-c6wx.onrender.com/get")
       .then((res) => res.json())
       .then((finaldata) => setData(finaldata));
   }
@@ -21,7 +21,7 @@ function App() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    fetch("http://localhost:8000/post", {
+    fetch("https://residents-c6wx.onrender.com/post", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
